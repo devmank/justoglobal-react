@@ -1,6 +1,6 @@
 export const formatServerTime = (serverTime: string): string => {
   return new Date(serverTime).toLocaleString("en-IN", {
-    timeZone: "Asia/Kolkata", // Convert to IST
+    timeZone: "Asia/Kolkata",
     year: "numeric",
     month: "long",
     day: "numeric",

@@ -1,7 +1,7 @@
-export const dashboardApi = async () => {
+export const getUsersApi = async () => {
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch(`http://localhost:8080/common/getTime`, {
+    const response = await fetch(`http://localhost:8080/user`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

@@ -7,7 +7,7 @@ const LoginLink = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    let isMounted = true; // Track if the component is still mounted
+    let isMounted = true;
 
     const validateLink = async () => {
       if (localStorage.getItem("token")) {
@@ -37,6 +37,8 @@ const LoginLink = () => {
           }
         }
       } catch (error) {
+        console.debug(error);
+
         if (isMounted) {
           setError("An error occurred while validating the login link.");
           setTimeout(() => navigate("/login"), 3000);
